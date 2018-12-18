@@ -29,7 +29,7 @@ ASSIGN
 			(location = conta) & codigo_conta : quantia_Deposito;
 			(location = conta) & !codigo_conta : error;
 			(location = quantia_Deposito) & quantia : operacoes;
-			(location = quantia_Deposito) & !quantia : error;
+			(location = quantia_Deposito) & !quantia : saldo_Insuficiente;
 			(location = error) : operacoes;
 			(location = operacoes) & op_sair : idle;
 			TRUE : idle;
